@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<JUCERPROJECT id="svyY4A" name="RockTrack" projectType="guiapp" version="0.0.1"
+              bundleIdentifier="com.nstoker.RockTrack" includeBinaryInAppConfig="1"
+              jucerVersion="3.1.0">
+  <MAINGROUP id="IdSLrI" name="RockTrack">
+    <GROUP id="{FEFA1019-CBA2-6B53-EA28-1632669AED5A}" name="sqlite3">
+      <FILE id="ZhvEe2" name="sqlite3.h" compile="0" resource="0" file="sqlite3/sqlite3.h"/>
+      <FILE id="K9JNEg" name="sqlite3ext.h" compile="0" resource="0" file="sqlite3/sqlite3ext.h"/>
+      <FILE id="yjhd6N" name="sqlite3pp.cpp" compile="1" resource="0" file="sqlite3/sqlite3pp.cpp"/>
+      <FILE id="yJyVh3" name="sqlite3pp.h" compile="0" resource="0" file="sqlite3/sqlite3pp.h"/>
+      <FILE id="FFt0aP" name="sqlite3ppext.cpp" compile="1" resource="0"
+            file="sqlite3/sqlite3ppext.cpp"/>
+      <FILE id="uR1Zlk" name="sqlite3ppext.h" compile="0" resource="0" file="sqlite3/sqlite3ppext.h"/>
+    </GROUP>
+    <GROUP id="{16A451BE-FE8A-FA50-F948-4B8F2FEEA049}" name="Source">
+      <FILE id="wOEuRk" name="MainComponent.cpp" compile="1" resource="0"
+            file="Source/MainComponent.cpp"/>
+      <FILE id="UZKEKJ" name="MainComponent.h" compile="0" resource="0" file="Source/MainComponent.h"/>
+      <FILE id="aIrhtx" name="Main.cpp" compile="1" resource="0" file="Source/Main.cpp"/>
+    </GROUP>
+  </MAINGROUP>
+  <EXPORTFORMATS>
+    <XCODE_MAC targetFolder="Builds/MacOSX">
+      <CONFIGURATIONS>
+        <CONFIGURATION name="Debug" osxSDK="default" osxCompatibility="default" osxArchitecture="default"
+                       isDebug="1" optimisation="1" targetName="RockTrack"/>
+        <CONFIGURATION name="Release" osxSDK="default" osxCompatibility="default" osxArchitecture="default"
+                       isDebug="0" optimisation="2" targetName="RockTrack"/>
+      </CONFIGURATIONS>
+      <MODULEPATHS>
+        <MODULEPATH id="juce_core" path="../../../../../../Development/juce/modules"/>
+        <MODULEPATH id="juce_events" path="../../../../../../Development/juce/modules"/>
+        <MODULEPATH id="juce_graphics" path="../../../../../../Development/juce/modules"/>
+        <MODULEPATH id="juce_data_structures" path="../../../../../../Development/juce/modules"/>
+        <MODULEPATH id="juce_gui_basics" path="../../../../../../Development/juce/modules"/>
+        <MODULEPATH id="juce_gui_extra" path="../../../../../../Development/juce/modules"/>
+        <MODULEPATH id="juce_cryptography" path="../../../../../../Development/juce/modules"/>
+        <MODULEPATH id="juce_video" path="../../../../../../Development/juce/modules"/>
+        <MODULEPATH id="juce_opengl" path="../../../../../../Development/juce/modules"/>
+        <MODULEPATH id="juce_audio_basics" path="../../../../../../Development/juce/modules"/>
+        <MODULEPATH id="juce_audio_devices" path="../../../../../../Development/juce/modules"/>
+        <MODULEPATH id="juce_audio_formats" path="../../../../../../Development/juce/modules"/>
+        <MODULEPATH id="juce_audio_processors" path="../../../../../../Development/juce/modules"/>
+      </MODULEPATHS>
+    </XCODE_MAC>
+    <VS2013 targetFolder="Builds/VisualStudio2013">
+      <CONFIGURATIONS>
+        <CONFIGURATION name="Debug" winWarningLevel="4" generateManifest="1" winArchitecture="32-bit"
+                       isDebug="1" optimisation="1" targetName="RockTrack"/>
+        <CONFIGURATION name="Release" winWarningLevel="4" generateManifest="1" winArchitecture="32-bit"
+                       isDebug="0" optimisation="2" targetName="RockTrack"/>
+      </CONFIGURATIONS>
+      <MODULEPATHS>
+        <MODULEPATH id="juce_core" path="../../../../../../Development/juce/modules"/>
+        <MODULEPATH id="juce_events" path="../../../../../../Development/juce/modules"/>
+        <MODULEPATH id="juce_graphics" path="../../../../../../Development/juce/modules"/>
+        <MODULEPATH id="juce_data_structures" path="../../../../../../Development/juce/modules"/>
+        <MODULEPATH id="juce_gui_basics" path="../../../../../../Development/juce/modules"/>
+        <MODULEPATH id="juce_gui_extra" path="../../../../../../Development/juce/modules"/>
+        <MODULEPATH id="juce_cryptography" path="../../../../../../Development/juce/modules"/>
+        <MODULEPATH id="juce_video" path="../../../../../../Development/juce/modules"/>
+        <MODULEPATH id="juce_opengl" path="../../../../../../Development/juce/modules"/>
+        <MODULEPATH id="juce_audio_basics" path="../../../../../../Development/juce/modules"/>
+        <MODULEPATH id="juce_audio_devices" path="../../../../../../Development/juce/modules"/>
+        <MODULEPATH id="juce_audio_formats" path="../../../../../../Development/juce/modules"/>
+        <MODULEPATH id="juce_audio_processors" path="../../../../../../Development/juce/modules"/>
+      </MODULEPATHS>
+    </VS2013>
+    <LINUX_MAKE targetFolder="Builds/Linux">
+      <CONFIGURATIONS>
+        <CONFIGURATION name="Debug" libraryPath="/usr/X11R6/lib/" isDebug="1" optimisation="1"
+                       targetName="RockTrack"/>
+        <CONFIGURATION name="Release" libraryPath="/usr/X11R6/lib/" isDebug="0" optimisation="2"
+                       targetName="RockTrack"/>
+      </CONFIGURATIONS>
+      <MODULEPATHS>
+        <MODULEPATH id="juce_core" path="../../../../../../Development/juce/modules"/>
+        <MODULEPATH id="juce_events" path="../../../../../../Development/juce/modules"/>
+        <MODULEPATH id="juce_graphics" path="../../../../../../Development/juce/modules"/>
+        <MODULEPATH id="juce_data_structures" path="../../../../../../Development/juce/modules"/>
+        <MODULEPATH id="juce_gui_basics" path="../../../../../../Development/juce/modules"/>
+        <MODULEPATH id="juce_gui_extra" path="../../../../../../Development/juce/modules"/>
+        <MODULEPATH id="juce_cryptography" path="../../../../../../Development/juce/modules"/>
+        <MODULEPATH id="juce_video" path="../../../../../../Development/juce/modules"/>
+        <MODULEPATH id="juce_opengl" path="../../../../../../Development/juce/modules"/>
+        <MODULEPATH id="juce_audio_basics" path="../../../../../../Development/juce/modules"/>
+        <MODULEPATH id="juce_audio_devices" path="../../../../../../Development/juce/modules"/>
+        <MODULEPATH id="juce_audio_formats" path="../../../../../../Development/juce/modules"/>
+        <MODULEPATH id="juce_audio_processors" path="../../../../../../Development/juce/modules"/>
+      </MODULEPATHS>
+    </LINUX_MAKE>
+  </EXPORTFORMATS>
+  <MODULES>
+    <MODULES id="juce_audio_basics" showAllCode="1" useLocalCopy="0"/>
+    <MODULES id="juce_audio_devices" showAllCode="1" useLocalCopy="0"/>
+    <MODULES id="juce_audio_formats" showAllCode="1" useLocalCopy="0"/>
+    <MODULES id="juce_audio_processors" showAllCode="1" useLocalCopy="0"/>
+    <MODULES id="juce_core" showAllCode="1" useLocalCopy="0"/>
+    <MODULES id="juce_cryptography" showAllCode="1" useLocalCopy="0"/>
+    <MODULES id="juce_data_structures" showAllCode="1" useLocalCopy="0"/>
+    <MODULES id="juce_events" showAllCode="1" useLocalCopy="0"/>
+    <MODULES id="juce_graphics" showAllCode="1" useLocalCopy="0"/>
+    <MODULES id="juce_gui_basics" showAllCode="1" useLocalCopy="0"/>
+    <MODULES id="juce_gui_extra" showAllCode="1" useLocalCopy="0"/>
+    <MODULES id="juce_opengl" showAllCode="1" useLocalCopy="0"/>
+    <MODULES id="juce_video" showAllCode="1" useLocalCopy="0"/>
+  </MODULES>
+  <JUCEOPTIONS/>
+</JUCERPROJECT>
