@@ -71,6 +71,12 @@ void CDatabase::initialise()
 	// The updates are organised into blocks, separated by a 0. A number of updates can be added in a single set of up updates
 	const char* const updates[] = {
 		// Schema Version 1: 
+		"CREATE TABLE Songs (SongID INTEGER PRIMARY KEY, Title TEXT, Artist TEXT, Duration TIMESTAMP, Year TEXT)",
+		"CREATE TABLE Tunings(TuningID INTEGER PRIMARY KEY, Tuning TEXT)",
+		"CREATE TABLE Arrangements(ArrangementID INTEGER PRIMARY KEY, SongID INTEGER, Arrangement TEXT, TuningID INTEGER, FOREIGN KEY(SongID) REFERENCES Songs(SongID), FOREIGN KEY(TuningID) REFERENCES Tunings(TuningID) )",
+		"CREATE TABLE Users (UserID INTEGER PRIMARY KEY, UserName TEXT)",
+		"CREATE TABLE UserPlays (UserPlayID INTEGER PRIMARY KEY, ArrangementID INTEGER, DateStamp DATETIME, Score NUMERIC, Streak INTEGER, Mastery NUMERIC, Overall NUMERIC"
+		", FOREIGN KEY(ArrangementID) REFERENCES Arrangements(ArrangementID))",
 		0,
 		// Don't forget that there must be two 0 values at the end of the updates.
 		0
