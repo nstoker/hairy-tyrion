@@ -53,6 +53,7 @@ endif
 OBJECTS := \
   $(OBJDIR)/sqlite3pp_7201c514.o \
   $(OBJDIR)/sqlite3ppext_9d5d9197.o \
+  $(OBJDIR)/database_635dc264.o \
   $(OBJDIR)/MainComponent_a6ffb4a5.o \
   $(OBJDIR)/Main_90ebc5c2.o \
   $(OBJDIR)/juce_audio_basics_d26e7070.o \
@@ -94,6 +95,11 @@ $(OBJDIR)/sqlite3pp_7201c514.o: ../../sqlite3/sqlite3pp.cpp
 $(OBJDIR)/sqlite3ppext_9d5d9197.o: ../../sqlite3/sqlite3ppext.cpp
 	-@mkdir -p $(OBJDIR)
 	@echo "Compiling sqlite3ppext.cpp"
+	@$(CXX) $(CXXFLAGS) -o "$@" -c "$<"
+
+$(OBJDIR)/database_635dc264.o: ../../Source/database.cpp
+	-@mkdir -p $(OBJDIR)
+	@echo "Compiling database.cpp"
 	@$(CXX) $(CXXFLAGS) -o "$@" -c "$<"
 
 $(OBJDIR)/MainComponent_a6ffb4a5.o: ../../Source/MainComponent.cpp
