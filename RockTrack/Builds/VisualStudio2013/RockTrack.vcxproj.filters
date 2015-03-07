@@ -304,6 +304,9 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\sqlite3\sqlite3.c">
+      <Filter>RockTrack\sqlite3</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\sqlite3\sqlite3pp.cpp">
       <Filter>RockTrack\sqlite3</Filter>
     </ClCompile>
@@ -313,10 +316,10 @@
     <ClCompile Include="..\..\Source\database.cpp">
       <Filter>RockTrack\Source</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\Source\MainComponent.cpp">
+    <ClCompile Include="..\..\Source\Main.cpp">
       <Filter>RockTrack\Source</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\Source\Main.cpp">
+    <ClCompile Include="..\..\Source\MainComponent.cpp">
       <Filter>RockTrack\Source</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\..\..\..\..\..\Development\juce\modules\juce_audio_basics\buffers\juce_AudioDataConverters.cpp">

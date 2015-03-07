@@ -51,11 +51,12 @@ ifeq ($(CONFIG),Release)
 endif
 
 OBJECTS := \
+  $(OBJDIR)/sqlite3_f53d59d4.o \
   $(OBJDIR)/sqlite3pp_7201c514.o \
   $(OBJDIR)/sqlite3ppext_9d5d9197.o \
   $(OBJDIR)/database_635dc264.o \
-  $(OBJDIR)/MainComponent_a6ffb4a5.o \
   $(OBJDIR)/Main_90ebc5c2.o \
+  $(OBJDIR)/MainComponent_a6ffb4a5.o \
   $(OBJDIR)/juce_audio_basics_d26e7070.o \
   $(OBJDIR)/juce_audio_devices_763f692e.o \
   $(OBJDIR)/juce_audio_formats_a4c0b2ce.o \
@@ -87,6 +88,11 @@ strip:
 	@echo Stripping RockTrack
 	-@strip --strip-unneeded $(OUTDIR)/$(TARGET)
 
+$(OBJDIR)/sqlite3_f53d59d4.o: ../../sqlite3/sqlite3.c
+	-@mkdir -p $(OBJDIR)
+	@echo "Compiling sqlite3.c"
+	@$(CC) $(CFLAGS) -o "$@" -c "$<"
+
 $(OBJDIR)/sqlite3pp_7201c514.o: ../../sqlite3/sqlite3pp.cpp
 	-@mkdir -p $(OBJDIR)
 	@echo "Compiling sqlite3pp.cpp"
@@ -102,14 +108,14 @@ $(OBJDIR)/database_635dc264.o: ../../Source/database.cpp
 	@echo "Compiling database.cpp"
 	@$(CXX) $(CXXFLAGS) -o "$@" -c "$<"
 
-$(OBJDIR)/MainComponent_a6ffb4a5.o: ../../Source/MainComponent.cpp
-	-@mkdir -p $(OBJDIR)
-	@echo "Compiling MainComponent.cpp"
-	@$(CXX) $(CXXFLAGS) -o "$@" -c "$<"
-
 $(OBJDIR)/Main_90ebc5c2.o: ../../Source/Main.cpp
 	-@mkdir -p $(OBJDIR)
 	@echo "Compiling Main.cpp"
+	@$(CXX) $(CXXFLAGS) -o "$@" -c "$<"
+
+$(OBJDIR)/MainComponent_a6ffb4a5.o: ../../Source/MainComponent.cpp
+	-@mkdir -p $(OBJDIR)
+	@echo "Compiling MainComponent.cpp"
 	@$(CXX) $(CXXFLAGS) -o "$@" -c "$<"
 
 $(OBJDIR)/juce_audio_basics_d26e7070.o: ../../../../../../../../Development/juce/modules/juce_audio_basics/juce_audio_basics.cpp
