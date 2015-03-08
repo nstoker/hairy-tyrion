@@ -5,6 +5,9 @@
     <Filter Include="RockTrack">
       <UniqueIdentifier>{2197EA1E-0502-B72C-EE30-C027D114830D}</UniqueIdentifier>
     </Filter>
+    <Filter Include="RockTrack\Images">
+      <UniqueIdentifier>{19A990B2-F596-C78A-8AC4-5961CCF9744C}</UniqueIdentifier>
+    </Filter>
     <Filter Include="RockTrack\sqlite3">
       <UniqueIdentifier>{4DC8967F-D95F-EF11-C69D-70272C644E24}</UniqueIdentifier>
     </Filter>
@@ -1483,6 +1486,9 @@
     <ClCompile Include="..\..\..\..\..\..\..\..\Development\juce\modules\juce_video\native\juce_win32_QuickTimeMovieComponent.cpp">
       <Filter>Juce Modules\juce_video\native</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\JuceLibraryCode\BinaryData.cpp">
+      <Filter>Juce Library Code</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\..\..\..\..\..\..\Development\juce\modules\juce_audio_basics\juce_audio_basics.cpp">
       <Filter>Juce Library Code</Filter>
     </ClCompile>
@@ -2874,11 +2880,17 @@
     <ClInclude Include="..\..\JuceLibraryCode\AppConfig.h">
       <Filter>Juce Library Code</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\JuceLibraryCode\BinaryData.h">
+      <Filter>Juce Library Code</Filter>
+    </ClInclude>
     <ClInclude Include="..\..\JuceLibraryCode\JuceHeader.h">
       <Filter>Juce Library Code</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
+    <None Include="..\..\Images\rockTrack.png">
+      <Filter>RockTrack\Images</Filter>
+    </None>
     <None Include="..\..\..\..\..\..\..\..\Development\juce\modules\juce_audio_basics\juce_module_info">
       <Filter>Juce Modules\juce_audio_basics</Filter>
     </None>
@@ -2917,6 +2929,9 @@
     </None>
     <None Include="..\..\..\..\..\..\..\..\Development\juce\modules\juce_video\juce_module_info">
       <Filter>Juce Modules\juce_video</Filter>
+    </None>
+    <None Include=".\icon.ico">
+      <Filter>Juce Library Code</Filter>
     </None>
   </ItemGroup>
   <ItemGroup>

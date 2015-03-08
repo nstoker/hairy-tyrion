@@ -57,6 +57,7 @@ OBJECTS := \
   $(OBJDIR)/database_635dc264.o \
   $(OBJDIR)/Main_90ebc5c2.o \
   $(OBJDIR)/MainComponent_a6ffb4a5.o \
+  $(OBJDIR)/BinaryData_ce4232d4.o \
   $(OBJDIR)/juce_audio_basics_d26e7070.o \
   $(OBJDIR)/juce_audio_devices_763f692e.o \
   $(OBJDIR)/juce_audio_formats_a4c0b2ce.o \
@@ -116,6 +117,11 @@ $(OBJDIR)/Main_90ebc5c2.o: ../../Source/Main.cpp
 $(OBJDIR)/MainComponent_a6ffb4a5.o: ../../Source/MainComponent.cpp
 	-@mkdir -p $(OBJDIR)
 	@echo "Compiling MainComponent.cpp"
+	@$(CXX) $(CXXFLAGS) -o "$@" -c "$<"
+
+$(OBJDIR)/BinaryData_ce4232d4.o: ../../JuceLibraryCode/BinaryData.cpp
+	-@mkdir -p $(OBJDIR)
+	@echo "Compiling BinaryData.cpp"
 	@$(CXX) $(CXXFLAGS) -o "$@" -c "$<"
 
 $(OBJDIR)/juce_audio_basics_d26e7070.o: ../../../../../../../../Development/juce/modules/juce_audio_basics/juce_audio_basics.cpp

@@ -4,6 +4,9 @@
               bundleIdentifier="com.nstoker.RockTrack" includeBinaryInAppConfig="1"
               jucerVersion="3.1.0">
   <MAINGROUP id="IdSLrI" name="RockTrack">
+    <GROUP id="{5641A92A-AD01-6CA4-7B71-B1CCCB4B3A5B}" name="Images">
+      <FILE id="ewtnxK" name="rockTrack.png" compile="0" resource="1" file="Images/rockTrack.png"/>
+    </GROUP>
     <GROUP id="{556FA683-EC51-3C8D-B560-AE8FEFCFC844}" name="sqlite3">
       <FILE id="eOAAPO" name="sqlite3.c" compile="1" resource="0" file="sqlite3/sqlite3.c"/>
       <FILE id="NYJygZ" name="sqlite3.h" compile="0" resource="0" file="sqlite3/sqlite3.h"/>
@@ -24,7 +27,7 @@
     </GROUP>
   </MAINGROUP>
   <EXPORTFORMATS>
-    <XCODE_MAC targetFolder="Builds/MacOSX">
+    <XCODE_MAC targetFolder="Builds/MacOSX" bigIcon="ewtnxK" smallIcon="ewtnxK">
       <CONFIGURATIONS>
         <CONFIGURATION name="Debug" osxSDK="default" osxCompatibility="default" osxArchitecture="default"
                        isDebug="1" optimisation="1" targetName="RockTrack"/>
@@ -47,7 +50,7 @@
         <MODULEPATH id="juce_audio_processors" path="../../../../../../Development/juce/modules"/>
       </MODULEPATHS>
     </XCODE_MAC>
-    <VS2013 targetFolder="Builds/VisualStudio2013">
+    <VS2013 targetFolder="Builds/VisualStudio2013" smallIcon="ewtnxK" bigIcon="ewtnxK">
       <CONFIGURATIONS>
         <CONFIGURATION name="Debug" winWarningLevel="4" generateManifest="1" winArchitecture="32-bit"
                        isDebug="1" optimisation="1" targetName="RockTrack"/>
@@ -70,7 +73,7 @@
         <MODULEPATH id="juce_audio_processors" path="../../../../../../Development/juce/modules"/>
       </MODULEPATHS>
     </VS2013>
-    <LINUX_MAKE targetFolder="Builds/Linux">
+    <LINUX_MAKE targetFolder="Builds/Linux" smallIcon="ewtnxK" bigIcon="ewtnxK">
       <CONFIGURATIONS>
         <CONFIGURATION name="Debug" libraryPath="/usr/X11R6/lib/" isDebug="1" optimisation="1"
                        targetName="RockTrack"/>

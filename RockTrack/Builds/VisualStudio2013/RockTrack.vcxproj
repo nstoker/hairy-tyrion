@@ -1223,6 +1223,7 @@
     <ClCompile Include="..\..\..\..\..\..\..\..\Development\juce\modules\juce_video\native\juce_win32_QuickTimeMovieComponent.cpp">
       <ExcludedFromBuild>true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="..\..\JuceLibraryCode\BinaryData.cpp"/>
     <ClCompile Include="..\..\..\..\..\..\..\..\Development\juce\modules\juce_audio_basics\juce_audio_basics.cpp"/>
     <ClCompile Include="..\..\..\..\..\..\..\..\Development\juce\modules\juce_audio_devices\juce_audio_devices.cpp"/>
     <ClCompile Include="..\..\..\..\..\..\..\..\Development\juce\modules\juce_audio_formats\juce_audio_formats.cpp"/>
@@ -1688,9 +1689,11 @@
     <ClInclude Include="..\..\..\..\..\..\..\..\Development\juce\modules\juce_video\capture\juce_CameraDevice.h"/>
     <ClInclude Include="..\..\..\..\..\..\..\..\Development\juce\modules\juce_video\juce_video.h"/>
     <ClInclude Include="..\..\JuceLibraryCode\AppConfig.h"/>
+    <ClInclude Include="..\..\JuceLibraryCode\BinaryData.h"/>
     <ClInclude Include="..\..\JuceLibraryCode\JuceHeader.h"/>
   </ItemGroup>
   <ItemGroup>
+    <None Include="..\..\Images\rockTrack.png"/>
     <None Include="..\..\..\..\..\..\..\..\Development\juce\modules\juce_audio_basics\juce_module_info"/>
     <None Include="..\..\..\..\..\..\..\..\Development\juce\modules\juce_audio_devices\juce_module_info"/>
     <None Include="..\..\..\..\..\..\..\..\Development\juce\modules\juce_audio_formats\juce_module_info"/>
@@ -1704,6 +1707,7 @@
     <None Include="..\..\..\..\..\..\..\..\Development\juce\modules\juce_gui_extra\juce_module_info"/>
     <None Include="..\..\..\..\..\..\..\..\Development\juce\modules\juce_opengl\juce_module_info"/>
     <None Include="..\..\..\..\..\..\..\..\Development\juce\modules\juce_video\juce_module_info"/>
+    <None Include=".\icon.ico"/>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include=".\resources.rc"/>
