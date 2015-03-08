@@ -18,6 +18,7 @@
 */
 
 //[Headers] You can add your own extra header files here...
+#include "helperFunctions.h"
 //[/Headers]
 
 #include "appHeader.h"
@@ -27,20 +28,24 @@
 //[/MiscUserDefs]
 
 //==============================================================================
-appHeader::appHeader ()
+AppHeader::AppHeader ()
 {
 
     //[UserPreSize]
     //[/UserPreSize]
 
-    setSize (600, 400);
+    setSize (600, 100);
 
 
     //[Constructor] You can add your own custom stuff here..
+	addAndMakeVisible(appTitle = new Label("appTitle", TRANS("RockTrack")));
+	setLabel(appTitle, Font(30.0f, Font::plain), Justification::centredLeft, Colour(Colours::antiquewhite));
+	appTitle->setEditable(false, false, false);
+
     //[/Constructor]
 }
 
-appHeader::~appHeader()
+AppHeader::~AppHeader()
 {
     //[Destructor_pre]. You can add your own custom destruction code here..
     //[/Destructor_pre]
@@ -52,23 +57,27 @@ appHeader::~appHeader()
 }
 
 //==============================================================================
-void appHeader::paint (Graphics& g)
+void AppHeader::paint (Graphics& g)
 {
     //[UserPrePaint] Add your own custom painting code here..
     //[/UserPrePaint]
 
-    g.fillAll (Colours::white);
+    g.fillAll (Colour (0x6af807de));
 
     //[UserPaint] Add your own custom painting code here..
     //[/UserPaint]
 }
 
-void appHeader::resized()
+void AppHeader::resized()
 {
     //[UserPreResize] Add your own custom resize code here..
     //[/UserPreResize]
 
     //[UserResized] Add your own custom resize handling here..
+	Rectangle<int>area = getLocalBounds();
+
+	if (appTitle)
+		appTitle->setBounds(area);
     //[/UserResized]
 }
 
@@ -87,11 +96,11 @@ void appHeader::resized()
 
 BEGIN_JUCER_METADATA
 
-<JUCER_COMPONENT documentType="Component" className="appHeader" componentName=""
+<JUCER_COMPONENT documentType="Component" className="AppHeader" componentName=""
                  parentClasses="public Component" constructorParams="" variableInitialisers=""
                  snapPixels="8" snapActive="1" snapShown="1" overlayOpacity="0.330"
-                 fixedSize="0" initialWidth="600" initialHeight="400">
-  <BACKGROUND backgroundColour="ffffffff"/>
+                 fixedSize="0" initialWidth="600" initialHeight="100">
+  <BACKGROUND backgroundColour="6af807de"/>
 </JUCER_COMPONENT>
 
 END_JUCER_METADATA

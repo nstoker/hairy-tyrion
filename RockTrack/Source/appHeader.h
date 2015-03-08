@@ -17,8 +17,8 @@
   ==============================================================================
 */
 
-#ifndef __JUCE_HEADER_F1B8B5E61A4C8C3C__
-#define __JUCE_HEADER_F1B8B5E61A4C8C3C__
+#ifndef __JUCE_HEADER_7634759F399DA09C__
+#define __JUCE_HEADER_7634759F399DA09C__
 
 //[Headers]     -- You can add your own extra header files here --
 #include "JuceHeader.h"
@@ -34,12 +34,12 @@
     Describe your class and how it works here!
                                                                     //[/Comments]
 */
-class appHeader  : public Component
+class AppHeader  : public Component
 {
 public:
     //==============================================================================
-    appHeader ();
-    ~appHeader();
+    AppHeader ();
+    ~AppHeader();
 
     //==============================================================================
     //[UserMethods]     -- You can add your own custom methods in this section.
@@ -52,16 +52,17 @@ public:
 
 private:
     //[UserVariables]   -- You can add your own custom variables in this section.
+	ScopedPointer<Label>appTitle;
     //[/UserVariables]
 
     //==============================================================================
 
 
     //==============================================================================
-    JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (appHeader)
+    JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (AppHeader)
 };
 
 //[EndFile] You can add extra defines here...
 //[/EndFile]
 
-#endif   // __JUCE_HEADER_F1B8B5E61A4C8C3C__
+#endif   // __JUCE_HEADER_7634759F399DA09C__
