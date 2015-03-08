@@ -15,7 +15,10 @@
    id="svg2"
    version="1.1"
    inkscape:version="0.91 r13725"
-   sodipodi:docname="rockTrack.svg">
+   sodipodi:docname="rockTrack.svg"
+   inkscape:export-filename="C:\Users\user\Development\Projects\hairy-tyrion\RockTrack\Images\rockTrack.png"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90">
   <defs
      id="defs4" />
   <sodipodi:namedview
@@ -26,7 +29,7 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.7845001"
-     inkscape:cx="347.37478"
+     inkscape:cx="156.80756"
      inkscape:cy="593.35065"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
@@ -44,7 +47,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -57,23 +60,29 @@
        d="M 139.059,221.33137 C 312.91213,61.209624 485.88205,118.57357 548.34896,172.51759 669.21314,301.31602 726.0169,701.69985 639.03585,775.07341 556.43909,849.70901 205.9309,756.37156 57.07663,612.01089 -6.5799097,540.18657 -19.692052,365.14728 139.059,221.33137 Z"
        id="path3347"
        inkscape:connector-curvature="0"
-       sodipodi:nodetypes="ccccc" />
+       sodipodi:nodetypes="ccccc"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:277.26751709px;line-height:125%;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffff00;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="238.3452"
-       y="258.12845"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:296.63360596px;line-height:125%;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffff00;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="221.63084"
+       y="242.0442"
        id="text3353"
        sodipodi:linespacing="125%"
-       transform="matrix(0.92778525,0.48123804,-0.44054268,0.84932812,0,0)"><tspan
+       transform="matrix(0.88559741,0.48254326,-0.37801691,0.92320786,0,0)"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"><tspan
          sodipodi:role="line"
          id="tspan3355"
-         x="238.3452"
-         y="258.12845">rock</tspan></text>
+         x="221.63084"
+         y="242.0442">rock</tspan></text>
     <g
        transform="matrix(0.69996513,0.35792819,-0.3092819,0.60483235,163.12903,138.34419)"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:291.52398682px;line-height:125%;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffff00;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       id="text3353-4">
+       id="text3353-4"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90">
       <path
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;font-size:291.52398682px;line-height:125%;font-family:Impact;-inkscape-font-specification:'Impact, Condensed';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#ffff00"
          d="m 196.24455,348.84 2.76928,65.09735 -35.58642,0 2.81871,275.82297 c -23.22129,-7.25347 -40.72951,-19.74595 -55.48817,-34.75983 L 67.036614,414.94879 -7.1455176,414.68607 -13.106448,341.26471 Z"
