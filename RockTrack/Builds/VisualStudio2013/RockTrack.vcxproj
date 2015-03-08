@@ -134,7 +134,10 @@
     <ClCompile Include="..\..\sqlite3\sqlite3.c"/>
     <ClCompile Include="..\..\sqlite3\sqlite3pp.cpp"/>
     <ClCompile Include="..\..\sqlite3\sqlite3ppext.cpp"/>
-    <ClCompile Include="..\..\Source\database.cpp"/>
+    <ClCompile Include="..\..\Source\helperFunctions.cpp"/>
+    <ClCompile Include="..\..\Source\AppFooter.cpp"/>
+    <ClCompile Include="..\..\Source\AppHeader.cpp"/>
+    <ClCompile Include="..\..\Source\Database.cpp"/>
     <ClCompile Include="..\..\Source\Main.cpp"/>
     <ClCompile Include="..\..\Source\MainComponent.cpp"/>
     <ClCompile Include="..\..\..\..\..\..\..\..\Development\juce\modules\juce_audio_basics\buffers\juce_AudioDataConverters.cpp">
@@ -1243,7 +1246,10 @@
     <ClInclude Include="..\..\sqlite3\sqlite3ext.h"/>
     <ClInclude Include="..\..\sqlite3\sqlite3pp.h"/>
     <ClInclude Include="..\..\sqlite3\sqlite3ppext.h"/>
-    <ClInclude Include="..\..\Source\database.h"/>
+    <ClInclude Include="..\..\Source\helperFunctions.h"/>
+    <ClInclude Include="..\..\Source\AppFooter.h"/>
+    <ClInclude Include="..\..\Source\AppHeader.h"/>
+    <ClInclude Include="..\..\Source\Database.h"/>
     <ClInclude Include="..\..\Source\MainComponent.h"/>
     <ClInclude Include="..\..\..\..\..\..\..\..\Development\juce\modules\juce_audio_basics\buffers\juce_AudioDataConverters.h"/>
     <ClInclude Include="..\..\..\..\..\..\..\..\Development\juce\modules\juce_audio_basics\buffers\juce_AudioSampleBuffer.h"/>

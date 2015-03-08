@@ -18,8 +18,16 @@
       <FILE id="auBUiJ" name="sqlite3ppext.h" compile="0" resource="0" file="sqlite3/sqlite3ppext.h"/>
     </GROUP>
     <GROUP id="{16A451BE-FE8A-FA50-F948-4B8F2FEEA049}" name="Source">
-      <FILE id="uF2hsO" name="database.cpp" compile="1" resource="0" file="Source/database.cpp"/>
-      <FILE id="kDZvmP" name="database.h" compile="0" resource="0" file="Source/database.h"/>
+      <FILE id="HscgEn" name="helperFunctions.cpp" compile="1" resource="0"
+            file="Source/helperFunctions.cpp"/>
+      <FILE id="x5g0Iy" name="helperFunctions.h" compile="0" resource="0"
+            file="Source/helperFunctions.h"/>
+      <FILE id="IK2gqV" name="AppFooter.cpp" compile="1" resource="0" file="Source/AppFooter.cpp"/>
+      <FILE id="frnQdZ" name="AppFooter.h" compile="0" resource="0" file="Source/AppFooter.h"/>
+      <FILE id="hPHV9p" name="AppHeader.cpp" compile="1" resource="0" file="Source/AppHeader.cpp"/>
+      <FILE id="LV36AB" name="AppHeader.h" compile="0" resource="0" file="Source/AppHeader.h"/>
+      <FILE id="uF2hsO" name="Database.cpp" compile="1" resource="0" file="Source/Database.cpp"/>
+      <FILE id="kDZvmP" name="Database.h" compile="0" resource="0" file="Source/Database.h"/>
       <FILE id="aIrhtx" name="Main.cpp" compile="1" resource="0" file="Source/Main.cpp"/>
       <FILE id="wOEuRk" name="MainComponent.cpp" compile="1" resource="0"
             file="Source/MainComponent.cpp"/>

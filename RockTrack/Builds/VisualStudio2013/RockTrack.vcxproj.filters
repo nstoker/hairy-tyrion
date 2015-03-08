@@ -316,7 +316,16 @@
     <ClCompile Include="..\..\sqlite3\sqlite3ppext.cpp">
       <Filter>RockTrack\sqlite3</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\Source\database.cpp">
+    <ClCompile Include="..\..\Source\helperFunctions.cpp">
+      <Filter>RockTrack\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\AppFooter.cpp">
+      <Filter>RockTrack\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\AppHeader.cpp">
+      <Filter>RockTrack\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Database.cpp">
       <Filter>RockTrack\Source</Filter>
     </ClCompile>
     <ClCompile Include="..\..\Source\Main.cpp">
@@ -1542,7 +1551,16 @@
     <ClInclude Include="..\..\sqlite3\sqlite3ppext.h">
       <Filter>RockTrack\sqlite3</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Source\database.h">
+    <ClInclude Include="..\..\Source\helperFunctions.h">
+      <Filter>RockTrack\Source</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\AppFooter.h">
+      <Filter>RockTrack\Source</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\AppHeader.h">
+      <Filter>RockTrack\Source</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Database.h">
       <Filter>RockTrack\Source</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Source\MainComponent.h">

@@ -54,7 +54,10 @@ OBJECTS := \
   $(OBJDIR)/sqlite3_f53d59d4.o \
   $(OBJDIR)/sqlite3pp_7201c514.o \
   $(OBJDIR)/sqlite3ppext_9d5d9197.o \
-  $(OBJDIR)/database_635dc264.o \
+  $(OBJDIR)/helperFunctions_bd90698e.o \
+  $(OBJDIR)/AppFooter_36dde67d.o \
+  $(OBJDIR)/AppHeader_58104a6f.o \
+  $(OBJDIR)/Database_6d291684.o \
   $(OBJDIR)/Main_90ebc5c2.o \
   $(OBJDIR)/MainComponent_a6ffb4a5.o \
   $(OBJDIR)/BinaryData_ce4232d4.o \
@@ -104,9 +107,24 @@ $(OBJDIR)/sqlite3ppext_9d5d9197.o: ../../sqlite3/sqlite3ppext.cpp
 	@echo "Compiling sqlite3ppext.cpp"
 	@$(CXX) $(CXXFLAGS) -o "$@" -c "$<"
 
-$(OBJDIR)/database_635dc264.o: ../../Source/database.cpp
+$(OBJDIR)/helperFunctions_bd90698e.o: ../../Source/helperFunctions.cpp
 	-@mkdir -p $(OBJDIR)
-	@echo "Compiling database.cpp"
+	@echo "Compiling helperFunctions.cpp"
+	@$(CXX) $(CXXFLAGS) -o "$@" -c "$<"
+
+$(OBJDIR)/AppFooter_36dde67d.o: ../../Source/AppFooter.cpp
+	-@mkdir -p $(OBJDIR)
+	@echo "Compiling AppFooter.cpp"
+	@$(CXX) $(CXXFLAGS) -o "$@" -c "$<"
+
+$(OBJDIR)/AppHeader_58104a6f.o: ../../Source/AppHeader.cpp
+	-@mkdir -p $(OBJDIR)
+	@echo "Compiling AppHeader.cpp"
+	@$(CXX) $(CXXFLAGS) -o "$@" -c "$<"
+
+$(OBJDIR)/Database_6d291684.o: ../../Source/Database.cpp
+	-@mkdir -p $(OBJDIR)
+	@echo "Compiling Database.cpp"
 	@$(CXX) $(CXXFLAGS) -o "$@" -c "$<"
 
 $(OBJDIR)/Main_90ebc5c2.o: ../../Source/Main.cpp
