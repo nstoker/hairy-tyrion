@@ -18,6 +18,8 @@
       <FILE id="auBUiJ" name="sqlite3ppext.h" compile="0" resource="0" file="sqlite3/sqlite3ppext.h"/>
     </GROUP>
     <GROUP id="{16A451BE-FE8A-FA50-F948-4B8F2FEEA049}" name="Source">
+      <FILE id="wHj0gM" name="Logger.cpp" compile="1" resource="0" file="Source/Logger.cpp"/>
+      <FILE id="IhQsEZ" name="Logger.h" compile="0" resource="0" file="Source/Logger.h"/>
       <FILE id="HscgEn" name="helperFunctions.cpp" compile="1" resource="0"
             file="Source/helperFunctions.cpp"/>
       <FILE id="x5g0Iy" name="helperFunctions.h" compile="0" resource="0"

@@ -54,6 +54,7 @@ OBJECTS := \
   $(OBJDIR)/sqlite3_f53d59d4.o \
   $(OBJDIR)/sqlite3pp_7201c514.o \
   $(OBJDIR)/sqlite3ppext_9d5d9197.o \
+  $(OBJDIR)/Logger_4907cd19.o \
   $(OBJDIR)/helperFunctions_bd90698e.o \
   $(OBJDIR)/AppFooter_36dde67d.o \
   $(OBJDIR)/AppHeader_58104a6f.o \
@@ -105,6 +106,11 @@ $(OBJDIR)/sqlite3pp_7201c514.o: ../../sqlite3/sqlite3pp.cpp
 $(OBJDIR)/sqlite3ppext_9d5d9197.o: ../../sqlite3/sqlite3ppext.cpp
 	-@mkdir -p $(OBJDIR)
 	@echo "Compiling sqlite3ppext.cpp"
+	@$(CXX) $(CXXFLAGS) -o "$@" -c "$<"
+
+$(OBJDIR)/Logger_4907cd19.o: ../../Source/Logger.cpp
+	-@mkdir -p $(OBJDIR)
+	@echo "Compiling Logger.cpp"
 	@$(CXX) $(CXXFLAGS) -o "$@" -c "$<"
 
 $(OBJDIR)/helperFunctions_bd90698e.o: ../../Source/helperFunctions.cpp
