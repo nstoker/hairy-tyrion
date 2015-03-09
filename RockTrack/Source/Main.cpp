@@ -9,9 +9,12 @@
 */
 
 #include "../JuceLibraryCode/JuceHeader.h"
-#include "MainComponent.h"
-#include "database.h"
 
+#include "database.h"
+#include "helperFunctions.h"
+#include "MainComponent.h"
+
+CLogger myLog();
 //==============================================================================
 class RockTrackApplication  : public JUCEApplication
 {
@@ -29,8 +32,9 @@ public:
         // This method is where you should put your application's initialisation code..
 
         mainWindow = new MainWindow (getApplicationName());
-		logger = FileLogger::createDefaultAppLogger(getApplicationName(), getApplicationName() + ".log", "RockTrack application startup", 128 * 1024);
-		File dbPath = logger->getLogFile().getParentDirectory().getChildFile(getApplicationName() + ".sqlite3");
+
+		myLog.initialise(getApplicationName());
+		File dbPath = log->getLogFile().getChildFile(getApplicationName() + ".sqlite3");
 		CDatabase db(dbPath);
 		db.initialise();
     }
@@ -96,7 +100,7 @@ public:
     };
 
 private:
-	ScopedPointer<FileLogger> logger;
+	//ScopedPointer<FileLogger> logger;
     ScopedPointer<MainWindow> mainWindow;
 };
 

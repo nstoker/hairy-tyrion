@@ -18,6 +18,7 @@
 */
 
 //[Headers] You can add your own extra header files here...
+#include "../JuceLibraryCode/BinaryData.h"
 #include "helperFunctions.h"
 //[/Headers]
 
@@ -42,6 +43,17 @@ AppHeader::AppHeader ()
 	setLabel(appTitle, Font(30.0f, Font::plain), Justification::centredLeft, Colour(Colours::antiquewhite));
 	appTitle->setEditable(false, false, false);
 
+	addAndMakeVisible(appLogo = new ImageComponent("appLogo"));
+	
+	int imageSize = BinaryData::rockTrack_pngSize;
+	Image theLogo= ImageFileFormat::loadFrom(BinaryData::rockTrack_png,imageSize);
+	if (theLogo.isValid())
+	{
+		appLogo->setImage(theLogo);
+		Logger::writeToLog("Opened " + String(BinaryData::rockTrack_png));
+	}
+	else
+		Logger::writeToLog("Failed to open " + String(BinaryData::rockTrack_png));
     //[/Constructor]
 }
 
@@ -75,6 +87,9 @@ void AppHeader::resized()
 
     //[UserResized] Add your own custom resize handling here..
 	Rectangle<int>area = getLocalBounds();
+
+	if (appLogo)
+		appLogo->setBounds(area.removeFromLeft(appLogo->getWidth()));
 
 	if (appTitle)
 		appTitle->setBounds(area);

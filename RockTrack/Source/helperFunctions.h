@@ -13,6 +13,8 @@
 
 #include "JuceHeader.h"
 
-void setLabel(Label* theLabel, Font theFont, Justification theJustification, Colour theTextColour);
+#include "Logger.h"
 
+void setLabel(Label* theLabel, Font theFont, Justification theJustification, Colour theTextColour);
+extern CLogger myLog();
 #endif  // HELPERFUNCTIONS_H_INCLUDED

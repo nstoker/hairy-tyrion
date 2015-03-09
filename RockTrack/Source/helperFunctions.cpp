@@ -10,6 +10,7 @@
 
 #include "helperFunctions.h"
 
+
 void setLabel(Label* theLabel, Font theFont, Justification theJustification, Colour theTextColour)
 {
 	theLabel->setFont(theFont);
