@@ -33,6 +33,7 @@ CDatabase::~CDatabase() {}
 void CDatabase::initialise()
 {
 	// Get sqlite version
+#error 14 - Unable to open database file. Has it been created correctly?
 	int sqliteVersion = execSQLscalar("SELECT sqlite_version() as sqlite_version");
 	DBG(TRANS("SQLite version ") + String(sqliteVersion));
 
