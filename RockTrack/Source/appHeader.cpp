@@ -50,10 +50,10 @@ AppHeader::AppHeader ()
 	if (theLogo.isValid())
 	{
 		appLogo->setImage(theLogo);
-		Logger::writeToLog("Opened " + String(BinaryData::rockTrack_png));
+		Logger::writeToLog("Opened image" );
 	}
 	else
-		Logger::writeToLog("Failed to open " + String(BinaryData::rockTrack_png));
+		Logger::writeToLog("Failed to open image" );
     //[/Constructor]
 }
 
