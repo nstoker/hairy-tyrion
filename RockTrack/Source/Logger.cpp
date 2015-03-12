@@ -10,22 +10,19 @@
 
 #include "Logger.h"
 
-CLogger::CLogger(String appName)
+ScopedPointer<FileLogger> theLog;
+
+void initialiseLogger(String appName)
 {
-	//
+	theLog = FileLogger::createDefaultAppLogger(appName, appName + ".log2", TRANS("Rocktrack application startup"), 128 * 1024);
 }
 
-void CLogger::initialise(String appName)
+File getLoggerPath()
 {
-	theLog = FileLogger::createDefaultAppLogger(appName, appName + ".log", "RockTrack application startup", 128 * 1024);
+	return theLog->getLogFile().getParentDirectory();
 }
 
-File CLogger::getPath()
-{
-	return theLog->getLogFile().getParentDirectory()
-}
-
-void CLogger::write(String s)
+void writeToLogger(String s)
 {
 	theLog->writeToLog(s);
 }

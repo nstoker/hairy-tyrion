@@ -14,7 +14,6 @@
 #include "helperFunctions.h"
 #include "MainComponent.h"
 
-CLogger myLog();
 //==============================================================================
 class RockTrackApplication  : public JUCEApplication
 {
@@ -33,8 +32,9 @@ public:
 
         mainWindow = new MainWindow (getApplicationName());
 
-		myLog.initialise(getApplicationName());
-		File dbPath = log->getLogFile().getChildFile(getApplicationName() + ".sqlite3");
+		initialiseLogger(getApplicationName());
+		
+		File dbPath = theLog->getLogFile().getChildFile(getApplicationName() + ".sqlite3");
 		CDatabase db(dbPath);
 		db.initialise();
     }

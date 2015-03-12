@@ -13,17 +13,10 @@
 
 #include "../JuceLibraryCode/JuceHeader.h"
 
-class CLogger {
-public:
-	CLogger(String appName);
-	~CLogger(){};
+void initialiseLogger(String fileName);
+void writeToLogger(String s);
 
-	void initialise(String s);
-	void write(String s);
-	File getPath();
+extern ScopedPointer<FileLogger> theLog;
 
-private:
-	ScopedPointer<FileLogger> theLog;
-};
 
 #endif  // LOGGER_H_INCLUDED
