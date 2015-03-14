@@ -134,6 +134,7 @@
     <ClCompile Include="..\..\sqlite3\sqlite3.c"/>
     <ClCompile Include="..\..\sqlite3\sqlite3pp.cpp"/>
     <ClCompile Include="..\..\sqlite3\sqlite3ppext.cpp"/>
+    <ClCompile Include="..\..\Source\RockTrack.cpp"/>
     <ClCompile Include="..\..\Source\Logger.cpp"/>
     <ClCompile Include="..\..\Source\helperFunctions.cpp"/>
     <ClCompile Include="..\..\Source\AppFooter.cpp"/>
@@ -1247,6 +1248,7 @@
     <ClInclude Include="..\..\sqlite3\sqlite3ext.h"/>
     <ClInclude Include="..\..\sqlite3\sqlite3pp.h"/>
     <ClInclude Include="..\..\sqlite3\sqlite3ppext.h"/>
+    <ClInclude Include="..\..\Source\RockTrack.h"/>
     <ClInclude Include="..\..\Source\Logger.h"/>
     <ClInclude Include="..\..\Source\helperFunctions.h"/>
     <ClInclude Include="..\..\Source\AppFooter.h"/>
