@@ -13,8 +13,6 @@
 
 #include "../JuceLibraryCode/JuceHeader.h"
 
-void initialiseLogger(String fileName);
-void writeToLogger(String s);
 
 extern ScopedPointer<FileLogger> theLog;
 

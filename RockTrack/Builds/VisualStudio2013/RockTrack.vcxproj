@@ -135,7 +135,6 @@
     <ClCompile Include="..\..\sqlite3\sqlite3pp.cpp"/>
     <ClCompile Include="..\..\sqlite3\sqlite3ppext.cpp"/>
     <ClCompile Include="..\..\Source\RockTrack.cpp"/>
-    <ClCompile Include="..\..\Source\Logger.cpp"/>
     <ClCompile Include="..\..\Source\helperFunctions.cpp"/>
     <ClCompile Include="..\..\Source\AppFooter.cpp"/>
     <ClCompile Include="..\..\Source\AppHeader.cpp"/>

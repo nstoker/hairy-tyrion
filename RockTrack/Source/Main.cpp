@@ -31,7 +31,11 @@ public:
 
         mainWindow = new MainWindow (getApplicationName());
 
-		initialiseLogger(getApplicationName());
+		//initialiseLogger(getApplicationName());
+		theLog = FileLogger::createDefaultAppLogger(getApplicationName(), getApplicationName() + ".log", 
+			TRANS("Rocktrack application startup"), 128 * 1024);
+		
+		theLog->logMessage(TRANS("Application version ") + getApplicationVersion());
 		
 		File dbPath = theLog->getLogFile().getChildFile(getApplicationName() + ".sqlite3");
 		
@@ -42,8 +46,10 @@ public:
     void shutdown() override
     {
         // Add your application's shutdown code here..
-
+		theLog.release();
 		rockTrackDB.release();
+		theLog = nullptr;
+
         mainWindow = nullptr; // (deletes our window)
     }
 
@@ -101,8 +107,7 @@ public:
     };
 
 private:
-	//ScopedPointer<FileLogger> logger;
-    ScopedPointer<MainWindow> mainWindow;
+	ScopedPointer<MainWindow> mainWindow;
 };
 
 //==============================================================================

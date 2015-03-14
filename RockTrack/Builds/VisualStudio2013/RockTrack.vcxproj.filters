@@ -319,9 +319,6 @@
     <ClCompile Include="..\..\Source\RockTrack.cpp">
       <Filter>RockTrack\Source</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\Source\Logger.cpp">
-      <Filter>RockTrack\Source</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\Source\helperFunctions.cpp">
       <Filter>RockTrack\Source</Filter>
     </ClCompile>
