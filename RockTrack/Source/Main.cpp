@@ -10,8 +10,7 @@
 
 #include "../JuceLibraryCode/JuceHeader.h"
 
-#include "database.h"
-#include "helperFunctions.h"
+#include "RockTrack.h"
 #include "MainComponent.h"
 
 //==============================================================================
@@ -35,14 +34,16 @@ public:
 		initialiseLogger(getApplicationName());
 		
 		File dbPath = theLog->getLogFile().getChildFile(getApplicationName() + ".sqlite3");
-		CDatabase db(dbPath);
-		db.initialise();
+		
+		rockTrackDB = new CDatabase();
+		rockTrackDB->initialise(dbPath);
     }
 
     void shutdown() override
     {
         // Add your application's shutdown code here..
 
+		rockTrackDB.release();
         mainWindow = nullptr; // (deletes our window)
     }
 

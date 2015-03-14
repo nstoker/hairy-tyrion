@@ -9,8 +9,7 @@
 */
 
 #include "Logger.h"
-
-ScopedPointer<FileLogger> theLog;
+#include "RockTrack.h"
 
 void initialiseLogger(String appName)
 {

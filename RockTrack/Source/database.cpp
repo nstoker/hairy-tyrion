@@ -11,29 +11,27 @@ Author:  stokern
 #include "JuceHeader.h"
 #include "database.h"
 
-CDatabase::CDatabase(File dbPath)
-{
-	if (!dbPath.existsAsFile())
-		DBG(TRANS("Database does not exist, so creating blank database"));
-
-	int status = dbSqlite.connect(dbPath.getFullPathName().toUTF8());
-
-	if (0 == status)
-		DBG(TRANS("Database exists"));
-	else
-	{
-		DBG(TRANS("Error ") + String(status) + TRANS(" trying to connect to database"));
-		// TODO Fatal error - to terminate app?
-	}
-
-}
+CDatabase::CDatabase()
+{}
 
 CDatabase::~CDatabase() {}
 
-void CDatabase::initialise()
+int CDatabase::initialise(File dbPath)
 {
-	// Get sqlite version
-#error 14 - Unable to open database file. Has it been created correctly?
+	if (!dbPath.existsAsFile())
+		DBG(TRANS("Database does not exist, so creating blank database"));
+	
+	int status = dbSqlite.connect(dbPath.getFullPathName().toUTF8());
+
+	if (status != 0)
+	{
+		// An error occurred
+		DBG(TRANS("Error ") + String(status) + TRANS(" trying to connect to database"));
+
+		AlertWindow::showMessageBox(AlertWindow::WarningIcon, TRANS("Database error"), TRANS("Unable to connect to the database."));
+		return status;
+	} 
+		// Get sqlite version
 	int sqliteVersion = execSQLscalar("SELECT sqlite_version() as sqlite_version");
 	DBG(TRANS("SQLite version ") + String(sqliteVersion));
 
@@ -51,7 +49,7 @@ void CDatabase::initialise()
 	if (SQLITE_OK != result)
 	{
 		DBG(TRANS("Failed to create table. Error# ") + String(result) + ". " + getError(result));
-		return; // TODO Improve on this
+		return result; // TODO Improve on this
 	}
 
 	// And ensure the default value is added
@@ -60,7 +58,7 @@ void CDatabase::initialise()
 	if (SQLITE_OK != result)
 	{
 		DBG(TRANS("Failed to insert default value. Error # ") + String(result) + ". " + getError(result));
-		return;
+		return result;
 	}
 
 	// Check schema version for updates
@@ -116,6 +114,7 @@ void CDatabase::initialise()
 			++i;
 		}
 	}
+	return SQLITE_OK;
 }
 
 int CDatabase::execSQLscalar(String sql)
@@ -137,7 +136,7 @@ int CDatabase::execSQLscalar(String sql)
 
 String CDatabase::getError(int errNum)
 {
-	String rv = "";
+	String rv;
 
 	switch (errNum)
 	{
@@ -226,5 +225,5 @@ String CDatabase::getError(int errNum)
 	default:
 		rv = TRANS("Unknown error from sqlite3"); break;
 	}
-	return rv;
+	return TRANS("Error #") + String(errNum) + ": ' " + rv + "'.";
 }

@@ -18,9 +18,9 @@ using namespace sqlite3pp;
 class CDatabase
 {
 public:
-	CDatabase(File dbPath);
+	CDatabase();
 	~CDatabase();
-	void initialise();
+	int initialise(File dbPath);
 
 	// Helper functions
 	int execSQLscalar(String sql);
