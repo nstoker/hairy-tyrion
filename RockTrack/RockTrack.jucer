@@ -5,7 +5,7 @@
               jucerVersion="3.1.0">
   <MAINGROUP id="IdSLrI" name="RockTrack">
     <GROUP id="{5641A92A-AD01-6CA4-7B71-B1CCCB4B3A5B}" name="Images">
-      <FILE id="ewtnxK" name="rockTrack.png" compile="0" resource="1" file="Images/rockTrack.png"/>
+      <FILE id="dk3E2v" name="rockTrack.png" compile="0" resource="1" file="Images/rockTrack.png"/>
     </GROUP>
     <GROUP id="{556FA683-EC51-3C8D-B560-AE8FEFCFC844}" name="sqlite3">
       <FILE id="eOAAPO" name="sqlite3.c" compile="1" resource="0" file="sqlite3/sqlite3.c"/>
