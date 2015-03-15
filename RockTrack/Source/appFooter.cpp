@@ -18,7 +18,6 @@
 */
 
 //[Headers] You can add your own extra header files here...
-#include "helperFunctions.h"
 //[/Headers]
 
 #include "AppFooter.h"
@@ -39,7 +38,9 @@ AppFooter::AppFooter ()
 
     //[Constructor] You can add your own custom stuff here..
 	addAndMakeVisible(appVersion = new Label("appVersion", TRANS("Version ") + ProjectInfo::versionString));
-	setLabel(appVersion, Font(10.0f, Font::plain), Justification::centredRight, Colour(Colours::antiquewhite));
+	appVersion->setFont(Font(10.0f, Font::plain));
+	appVersion->setJustificationType(Justification::centredRight);
+	appVersion->setColour(Label::textColourId, Colours::antiquewhite);
 	appVersion->setEditable(false, false, false);
     //[/Constructor]
 }

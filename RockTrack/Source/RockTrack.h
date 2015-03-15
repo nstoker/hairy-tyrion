@@ -12,7 +12,6 @@
 #define ROCKTRACK_H_INCLUDED
 
 #include "Database.h"
-#include "helperFunctions.h"
 
 extern ScopedPointer<CDatabase> rockTrackDB;
 extern ScopedPointer<FileLogger> theLog;

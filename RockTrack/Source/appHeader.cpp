@@ -19,7 +19,7 @@
 
 //[Headers] You can add your own extra header files here...
 #include "../JuceLibraryCode/BinaryData.h"
-#include "helperFunctions.h"
+#include "RockTrack.h"
 //[/Headers]
 
 #include "appHeader.h"
@@ -40,7 +40,9 @@ AppHeader::AppHeader ()
 
     //[Constructor] You can add your own custom stuff here..
 	addAndMakeVisible(appTitle = new Label("appTitle", TRANS("RockTrack")));
-	setLabel(appTitle, Font(30.0f, Font::plain), Justification::centredLeft, Colour(Colours::antiquewhite));
+	appTitle->setFont(Font(30.0f, Font::plain));
+	appTitle->setJustificationType(Justification::centredLeft);
+	appTitle->setColour(Label::textColourId, Colours::antiquewhite);
 	appTitle->setEditable(false, false, false);
 
 	addAndMakeVisible(appLogo = new ImageComponent("appLogo"));
@@ -50,10 +52,10 @@ AppHeader::AppHeader ()
 	if (theLogo.isValid())
 	{
 		appLogo->setImage(theLogo);
-		Logger::writeToLog("Opened image" );
+		theLog->logMessage("Opened image" );
 	}
 	else
-		Logger::writeToLog("Failed to open image" );
+		theLog->logMessage("Failed to open image" );
     //[/Constructor]
 }
 

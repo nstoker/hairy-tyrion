@@ -28,19 +28,17 @@ public:
     void initialise (const String& /*commandLine*/) override
     {
         // This method is where you should put your application's initialisation code..
+		theLog = FileLogger::createDefaultAppLogger(getApplicationName(), getApplicationName() + ".log",
+			TRANS("Rocktrack application startup"), 128 * 1024);
+
+		theLog->logMessage(TRANS("Application version ") + getApplicationVersion());
 
         mainWindow = new MainWindow (getApplicationName());
 
-		//initialiseLogger(getApplicationName());
-		theLog = FileLogger::createDefaultAppLogger(getApplicationName(), getApplicationName() + ".log", 
-			TRANS("Rocktrack application startup"), 128 * 1024);
-		
-		theLog->logMessage(TRANS("Application version ") + getApplicationVersion());
-		
-		File dbPath = theLog->getLogFile().getChildFile(getApplicationName() + ".sqlite3");
-		
-		rockTrackDB = new CDatabase();
-		rockTrackDB->initialise(dbPath);
+		//File dbPath = theLog->getLogFile().getChildFile(getApplicationName() + ".sqlite3");
+		//
+		//rockTrackDB = new CDatabase();
+		//rockTrackDB->initialise(dbPath);
     }
 
     void shutdown() override
