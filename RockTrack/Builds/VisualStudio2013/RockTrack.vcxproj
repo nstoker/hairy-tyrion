@@ -134,6 +134,7 @@
     <ClCompile Include="..\..\sqlite3\sqlite3.c"/>
     <ClCompile Include="..\..\sqlite3\sqlite3pp.cpp"/>
     <ClCompile Include="..\..\sqlite3\sqlite3ppext.cpp"/>
+    <ClCompile Include="..\..\Source\AppHeader.cpp"/>
     <ClCompile Include="..\..\Source\RockTrack.cpp"/>
     <ClCompile Include="..\..\Source\Database.cpp"/>
     <ClCompile Include="..\..\Source\Main.cpp"/>
@@ -1244,6 +1245,7 @@
     <ClInclude Include="..\..\sqlite3\sqlite3ext.h"/>
     <ClInclude Include="..\..\sqlite3\sqlite3pp.h"/>
     <ClInclude Include="..\..\sqlite3\sqlite3ppext.h"/>
+    <ClInclude Include="..\..\Source\AppHeader.h"/>
     <ClInclude Include="..\..\Source\RockTrack.h"/>
     <ClInclude Include="..\..\Source\Database.h"/>
     <ClInclude Include="..\..\Source\MainComponent.h"/>

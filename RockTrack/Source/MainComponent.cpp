@@ -7,12 +7,14 @@
 */
 
 #include "MainComponent.h"
-
+#include "AppHeader.h"
 
 //==============================================================================
 MainContentComponent::MainContentComponent()
 {
     setSize (600, 400);
+
+	addAndMakeVisible(appHeader);
 }
 
 MainContentComponent::~MainContentComponent()
@@ -21,7 +23,7 @@ MainContentComponent::~MainContentComponent()
 
 void MainContentComponent::paint (Graphics& g)
 {
-    g.fillAll (Colour (0xff001F36));
+	g.fillAll(Colours::lightsteelblue);
 
     g.setFont (Font (16.0f));
     g.setColour (Colours::white);
@@ -31,4 +33,6 @@ void MainContentComponent::paint (Graphics& g)
 void MainContentComponent::resized()
 {
 	Rectangle<int> area = getLocalBounds();
+
+	appHeader.setBounds(area.removeFromTop(45));
 }
