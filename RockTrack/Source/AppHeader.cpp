@@ -18,6 +18,7 @@
 */
 
 //[Headers] You can add your own extra header files here...
+#include "RockTrack.h"
 //[/Headers]
 
 #include "AppHeader.h"
@@ -37,6 +38,9 @@ AppHeader::AppHeader ()
 
 
     //[Constructor] You can add your own custom stuff here..
+
+	theLog->writeToLog("Initialising header");
+
 	addAndMakeVisible(appTitle = new Label("appTitle", TRANS("RockTrack")));
 	appTitle->setFont(Font(30.0f, Font::plain));
 	appTitle->setJustificationType(Justification::centredLeft);
@@ -45,13 +49,16 @@ AppHeader::AppHeader ()
 
 	addAndMakeVisible(appLogo = new ImageComponent("appLogo"));
 
-	int imageSize = BinaryData::rockTrack_pngSize;
 	Image theLogo = ImageFileFormat::loadFrom(BinaryData::rockTrack_png, BinaryData::rockTrack_pngSize);
 	if (theLogo.isValid())
 	{
 		appLogo->setImage(theLogo);
-		theLog->logMessage("Set Application header image");
+		theLog->writeToLog("Set Application header image");
 	}
+	else
+		theLog->writeToLog("Unable to set application header image");
+
+	resized();
     //[/Constructor]
 }
 
@@ -91,6 +98,7 @@ void AppHeader::resized()
 
 	if (appTitle)
 		appTitle->setBounds(area);
+
     //[/UserResized]
 }
 
