@@ -20,10 +20,6 @@
     <GROUP id="{16A451BE-FE8A-FA50-F948-4B8F2FEEA049}" name="Source">
       <FILE id="NxFThc" name="RockTrack.cpp" compile="1" resource="0" file="Source/RockTrack.cpp"/>
       <FILE id="FXumxn" name="RockTrack.h" compile="0" resource="0" file="Source/RockTrack.h"/>
-      <FILE id="IK2gqV" name="AppFooter.cpp" compile="1" resource="0" file="Source/AppFooter.cpp"/>
-      <FILE id="frnQdZ" name="AppFooter.h" compile="0" resource="0" file="Source/AppFooter.h"/>
-      <FILE id="hPHV9p" name="AppHeader.cpp" compile="1" resource="0" file="Source/AppHeader.cpp"/>
-      <FILE id="LV36AB" name="AppHeader.h" compile="0" resource="0" file="Source/AppHeader.h"/>
       <FILE id="uF2hsO" name="Database.cpp" compile="1" resource="0" file="Source/Database.cpp"/>
       <FILE id="kDZvmP" name="Database.h" compile="0" resource="0" file="Source/Database.h"/>
       <FILE id="aIrhtx" name="Main.cpp" compile="1" resource="0" file="Source/Main.cpp"/>

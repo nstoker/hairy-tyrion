@@ -28,10 +28,9 @@ public:
     void initialise (const String& /*commandLine*/) override
     {
         // This method is where you should put your application's initialisation code..
-		theLog = FileLogger::createDefaultAppLogger(getApplicationName(), getApplicationName() + ".log",
-			TRANS("Rocktrack application startup"), 128 * 1024);
+		//theLog = FileLogger::createDefaultAppLogger(getApplicationName(), getApplicationName() + ".log",TRANS("Rocktrack application startup"), 128 * 1024);
 
-		theLog->logMessage(TRANS("Application version ") + getApplicationVersion());
+		//theLog->logMessage(TRANS("Application version ") + getApplicationVersion());
 
         mainWindow = new MainWindow (getApplicationName());
 
@@ -44,9 +43,9 @@ public:
     void shutdown() override
     {
         // Add your application's shutdown code here..
-		theLog.release();
+//		theLog.release();
 		rockTrackDB.release();
-		theLog = nullptr;
+//		theLog = nullptr;
 
         mainWindow = nullptr; // (deletes our window)
     }

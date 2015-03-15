@@ -319,12 +319,6 @@
     <ClCompile Include="..\..\Source\RockTrack.cpp">
       <Filter>RockTrack\Source</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\Source\AppFooter.cpp">
-      <Filter>RockTrack\Source</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\Source\AppHeader.cpp">
-      <Filter>RockTrack\Source</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\Source\Database.cpp">
       <Filter>RockTrack\Source</Filter>
     </ClCompile>
@@ -1552,12 +1546,6 @@
       <Filter>RockTrack\sqlite3</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Source\RockTrack.h">
-      <Filter>RockTrack\Source</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\AppFooter.h">
-      <Filter>RockTrack\Source</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\AppHeader.h">
       <Filter>RockTrack\Source</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Source\Database.h">

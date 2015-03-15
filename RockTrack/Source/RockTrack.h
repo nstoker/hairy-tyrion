@@ -14,7 +14,7 @@
 #include "Database.h"
 
 extern ScopedPointer<CDatabase> rockTrackDB;
-extern ScopedPointer<FileLogger> theLog;
+//extern ScopedPointer<FileLogger> theLog;
 
 
 

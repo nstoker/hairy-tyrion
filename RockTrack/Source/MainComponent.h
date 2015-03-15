@@ -10,8 +10,6 @@
 #define MAINCOMPONENT_H_INCLUDED
 
 #include "../JuceLibraryCode/JuceHeader.h"
-#include "appFooter.h"
-#include "appHeader.h"
 
 //==============================================================================
 /*
@@ -30,9 +28,6 @@ public:
 
 private:
     //==============================================================================
-
-	AppFooter appFooter; 
-	AppHeader appHeader;
 	
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (MainContentComponent)
 };

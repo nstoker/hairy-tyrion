@@ -55,8 +55,6 @@ OBJECTS := \
   $(OBJDIR)/sqlite3pp_7201c514.o \
   $(OBJDIR)/sqlite3ppext_9d5d9197.o \
   $(OBJDIR)/RockTrack_68690b47.o \
-  $(OBJDIR)/AppFooter_36dde67d.o \
-  $(OBJDIR)/AppHeader_58104a6f.o \
   $(OBJDIR)/Database_6d291684.o \
   $(OBJDIR)/Main_90ebc5c2.o \
   $(OBJDIR)/MainComponent_a6ffb4a5.o \
@@ -110,16 +108,6 @@ $(OBJDIR)/sqlite3ppext_9d5d9197.o: ../../sqlite3/sqlite3ppext.cpp
 $(OBJDIR)/RockTrack_68690b47.o: ../../Source/RockTrack.cpp
 	-@mkdir -p $(OBJDIR)
 	@echo "Compiling RockTrack.cpp"
-	@$(CXX) $(CXXFLAGS) -o "$@" -c "$<"
-
-$(OBJDIR)/AppFooter_36dde67d.o: ../../Source/AppFooter.cpp
-	-@mkdir -p $(OBJDIR)
-	@echo "Compiling AppFooter.cpp"
-	@$(CXX) $(CXXFLAGS) -o "$@" -c "$<"
-
-$(OBJDIR)/AppHeader_58104a6f.o: ../../Source/AppHeader.cpp
-	-@mkdir -p $(OBJDIR)
-	@echo "Compiling AppHeader.cpp"
 	@$(CXX) $(CXXFLAGS) -o "$@" -c "$<"
 
 $(OBJDIR)/Database_6d291684.o: ../../Source/Database.cpp

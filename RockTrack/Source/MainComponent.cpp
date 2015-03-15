@@ -13,9 +13,6 @@
 MainContentComponent::MainContentComponent()
 {
     setSize (600, 400);
-
-	addAndMakeVisible(appHeader);
-	addAndMakeVisible(appFooter);
 }
 
 MainContentComponent::~MainContentComponent()
@@ -34,7 +31,4 @@ void MainContentComponent::paint (Graphics& g)
 void MainContentComponent::resized()
 {
 	Rectangle<int> area = getLocalBounds();
-
-	appHeader.setBounds(area.removeFromTop(45));
-	appFooter.setBounds(area.removeFromBottom(20));
 }
