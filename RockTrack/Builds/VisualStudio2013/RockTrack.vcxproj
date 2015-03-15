@@ -1711,6 +1711,7 @@
     <None Include="..\..\..\..\..\..\..\..\Development\juce\modules\juce_gui_extra\juce_module_info"/>
     <None Include="..\..\..\..\..\..\..\..\Development\juce\modules\juce_opengl\juce_module_info"/>
     <None Include="..\..\..\..\..\..\..\..\Development\juce\modules\juce_video\juce_module_info"/>
+    <None Include=".\icon.ico"/>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include=".\resources.rc"/>
