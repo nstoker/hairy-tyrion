@@ -54,10 +54,10 @@ public:
     void shutdown() override
     {
         // Add your application's shutdown code here..
-		rockTrackDB.release();
-		
+		ScopedPointer<CDatabase> oldDB;		
 		ScopedPointer<FileLogger> oldPointer;
 
+		oldDB.swapWith(rockTrackDB);
 		oldPointer.swapWith(theLog);
         mainWindow = nullptr; // (deletes our window)
     }
