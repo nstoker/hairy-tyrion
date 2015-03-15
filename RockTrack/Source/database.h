@@ -18,13 +18,13 @@ using namespace sqlite3pp;
 class CDatabase
 {
 public:
-	CDatabase();
-	~CDatabase();
-	int initialise(File dbPath);
+	CDatabase(){};
+	~CDatabase(){};
+	void initialise(){};
 
 	// Helper functions
 	int execSQLscalar(String sql);
-
+	int connect(File dbPath);
 	String getError(int errNum);
 
 private:

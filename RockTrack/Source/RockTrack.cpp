@@ -11,4 +11,4 @@
 #include "RockTrack.h"
 
 ScopedPointer<CDatabase> rockTrackDB;
-//ScopedPointer<FileLogger> theLog;
+ScopedPointer<FileLogger> theLog;

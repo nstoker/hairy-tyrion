@@ -19,7 +19,11 @@ class RockTrackApplication  : public JUCEApplication
 public:
     //==============================================================================
     RockTrackApplication() {}
-
+	~RockTrackApplication()
+	{
+		theLog.release();
+		theLog = nullptr;
+	}
     const String getApplicationName() override       { return ProjectInfo::projectName; }
     const String getApplicationVersion() override    { return ProjectInfo::versionString; }
     bool moreThanOneInstanceAllowed() override       { return true; }
@@ -28,25 +32,33 @@ public:
     void initialise (const String& /*commandLine*/) override
     {
         // This method is where you should put your application's initialisation code..
-		//theLog = FileLogger::createDefaultAppLogger(getApplicationName(), getApplicationName() + ".log",TRANS("Rocktrack application startup"), 128 * 1024);
 
-		//theLog->logMessage(TRANS("Application version ") + getApplicationVersion());
+		// Setup the logging
+		String subDirectory = getApplicationName();
+		theLog = FileLogger::createDefaultAppLogger(subDirectory, getApplicationName() + ".log", getApplicationName() + TRANS(" version ") + getApplicationVersion() + TRANS(" starting"),32 * 1024);
 
-        mainWindow = new MainWindow (getApplicationName());
+		mainWindow = new MainWindow (getApplicationName());
 
-		//File dbPath = theLog->getLogFile().getChildFile(getApplicationName() + ".sqlite3");
-		//
-		//rockTrackDB = new CDatabase();
-		//rockTrackDB->initialise(dbPath);
+		File dbPath = theLog->getLogFile().getParentDirectory().getChildFile(getApplicationName() + ".sqlite3");
+		
+		theLog->logMessage(TRANS("Local database in ") + dbPath.getFullPathName());
+
+		rockTrackDB = new CDatabase();
+		if (0 != rockTrackDB->connect(dbPath))
+		{
+			theLog->writeToLog(TRANS("Database error. Closing application."));
+			//shutdown();
+		}
     }
 
     void shutdown() override
     {
         // Add your application's shutdown code here..
-//		theLog.release();
 		rockTrackDB.release();
-//		theLog = nullptr;
+		
+		ScopedPointer<FileLogger> oldPointer;
 
+		oldPointer.swapWith(theLog);
         mainWindow = nullptr; // (deletes our window)
     }
 

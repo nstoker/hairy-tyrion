@@ -13,16 +13,11 @@ Author:  stokern
 #include "database.h"
 #include "RockTrack.h"
 
-CDatabase::CDatabase()
-{}
-
-CDatabase::~CDatabase() {}
-
-int CDatabase::initialise(File dbPath)
+int CDatabase::connect(File dbPath)
 {
 	if (!dbPath.existsAsFile())
 	{
-		//theLog->logMessage(TRANS("Database does not exist, so creating blank database"));
+		theLog->logMessage(TRANS("Database does not exist, so creating blank database"));
 	}
 	
 	int status = dbSqlite.connect(dbPath.getFullPathName().toUTF8());
@@ -30,24 +25,24 @@ int CDatabase::initialise(File dbPath)
 	if (status != 0)
 	{
 		// An error occurred
-		//theLog->logMessage(TRANS("Error ") + String(status) + TRANS(" trying to connect to database"));
+		theLog->writeToLog(TRANS("Error ") + String(status) + " " + getError(status));
 
 		AlertWindow::showMessageBox(AlertWindow::WarningIcon, TRANS("Database error"), TRANS("Unable to connect to the database."));
 		return status;
 	} 
 		// Get sqlite version
 	int sqliteVersion = execSQLscalar("SELECT sqlite_version() as sqlite_version");
-//	theLog->logMessage(TRANS("SQLite version ") + String(sqliteVersion));
+	theLog->logMessage(TRANS("SQLite version ") + String(sqliteVersion));
 
 	// Enable foreign key support TODO: database browser is reporting that foreign key support is enabled!?
 	command cmd(dbSqlite, "PRAGMA foreign_keys = ON");
 	if (cmd.execute() == SQLITE_OK)
 	{
-		//theLog->logMessage(TRANS("Foreign keys ON"));
+		theLog->logMessage(TRANS("Foreign keys ON"));
 	}
 	else
 	{
-		//theLog->logMessage(TRANS("Foreign keys OFF"));
+		theLog->logMessage(TRANS("Foreign keys OFF"));
 
 	}
 
@@ -57,7 +52,7 @@ int CDatabase::initialise(File dbPath)
 
 	if (SQLITE_OK != result)
 	{
-		//theLog->logMessage(TRANS("Failed to create table. Error# ") + String(result) + ". " + getError(result));
+		theLog->logMessage(TRANS("Failed to create table. Error# ") + String(result) + ". " + getError(result));
 		return result; // TODO Improve on this
 	}
 
@@ -66,13 +61,13 @@ int CDatabase::initialise(File dbPath)
 	result = cmd.execute();
 	if (SQLITE_OK != result)
 	{
-//		theLog->logMessage(TRANS("Failed to insert default value. Error # ") + String(result) + ". " + getError(result));
+		theLog->logMessage(TRANS("Failed to insert default value. Error # ") + String(result) + ". " + getError(result));
 		return result;
 	}
 
 	// Check schema version for updates
 	int schemaVersion = execSQLscalar("SELECT IntValue FROM Schema WHERE Item = 'Schema'");
-	//theLog->logMessage(TRANS("Schema Version ") + String(schemaVersion));
+	theLog->logMessage(TRANS("Schema Version ") + String(schemaVersion));
 
 	// Upgrade Schema
 	bool bResult = true;
@@ -100,10 +95,10 @@ int CDatabase::initialise(File dbPath)
 			bResult = (SQLITE_OK == result);
 			if (!bResult)
 			{
-				//theLog->logMessage(TRANS("Error #") + String(result) + ": " + getError(result) + TRANS(" from ") + updates[i]);
+				theLog->logMessage(TRANS("Error #") + String(result) + ": " + getError(result) + TRANS(" from ") + updates[i]);
 				break;
 			}
-//			theLog->logMessage(updates[i]);
+			theLog->logMessage(updates[i]);
 		}
 
 		// Check to see if updates for this section are completed
@@ -116,10 +111,10 @@ int CDatabase::initialise(File dbPath)
 				result = cmd.execute();
 				if (SQLITE_OK != result)
 				{
-					//theLog->logMessage(TRANS("Failed to update schema version"));
+					theLog->logMessage(TRANS("Failed to update schema version"));
 				}
 				schemaVersion = new_version;
-//				theLog->logMessage(TRANS("Updated local database to Schema Version ") + String(schemaVersion));
+				theLog->logMessage(TRANS("Updated local database to Schema Version ") + String(schemaVersion));
 			}
 			++new_version;
 			++i;
