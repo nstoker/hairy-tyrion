@@ -9,12 +9,16 @@
 #include "MainComponent.h"
 #include "AppHeader.h"
 
+#include "BandedSlider.h"
+
 //==============================================================================
 MainContentComponent::MainContentComponent()
 {
     setSize (600, 400);
 
 	addAndMakeVisible(appHeader);
+	addAndMakeVisible(bs);
+	bs.setSliderStyle(Slider::SliderStyle::Rotary);
 }
 
 MainContentComponent::~MainContentComponent()
@@ -25,9 +29,9 @@ void MainContentComponent::paint (Graphics& g)
 {
 	g.fillAll(Colours::lightsteelblue);
 
-    g.setFont (Font (16.0f));
+    /*g.setFont (Font (16.0f));
     g.setColour (Colours::white);
-    g.drawText ("Hello world of Rocksmith!", getLocalBounds(), Justification::centred, true);
+    g.drawText ("Hello world of Rocksmith!", getLocalBounds(), Justification::centred, true);*/
 }
 
 void MainContentComponent::resized()
@@ -35,4 +39,6 @@ void MainContentComponent::resized()
 	Rectangle<int> area = getLocalBounds();
 
 	appHeader.setBounds(area.removeFromTop(45));
+
+	bs.setBounds(area);
 }

@@ -54,6 +54,7 @@ OBJECTS := \
   $(OBJDIR)/sqlite3_f53d59d4.o \
   $(OBJDIR)/sqlite3pp_7201c514.o \
   $(OBJDIR)/sqlite3ppext_9d5d9197.o \
+  $(OBJDIR)/BandedSlider_18d19d9e.o \
   $(OBJDIR)/AppHeader_58104a6f.o \
   $(OBJDIR)/RockTrack_68690b47.o \
   $(OBJDIR)/Database_6d291684.o \
@@ -104,6 +105,11 @@ $(OBJDIR)/sqlite3pp_7201c514.o: ../../sqlite3/sqlite3pp.cpp
 $(OBJDIR)/sqlite3ppext_9d5d9197.o: ../../sqlite3/sqlite3ppext.cpp
 	-@mkdir -p $(OBJDIR)
 	@echo "Compiling sqlite3ppext.cpp"
+	@$(CXX) $(CXXFLAGS) -o "$@" -c "$<"
+
+$(OBJDIR)/BandedSlider_18d19d9e.o: ../../Source/BandedSlider.cpp
+	-@mkdir -p $(OBJDIR)
+	@echo "Compiling BandedSlider.cpp"
 	@$(CXX) $(CXXFLAGS) -o "$@" -c "$<"
 
 $(OBJDIR)/AppHeader_58104a6f.o: ../../Source/AppHeader.cpp

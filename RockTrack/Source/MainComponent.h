@@ -12,7 +12,7 @@
 #include "../JuceLibraryCode/JuceHeader.h"
 
 #include "AppHeader.h"
-
+#include "BandedSlider.h"
 //==============================================================================
 /*
     This component lives inside our window, and this is where you should put all
@@ -31,7 +31,7 @@ public:
 private:
     //==============================================================================
 	AppHeader appHeader;
-
+	BandedSlider bs;
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (MainContentComponent)
 };
 
