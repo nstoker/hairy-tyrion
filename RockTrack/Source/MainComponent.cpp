@@ -19,6 +19,7 @@ MainContentComponent::MainContentComponent()
 	addAndMakeVisible(appHeader);
 	addAndMakeVisible(bs);
 	bs.setSliderStyle(Slider::SliderStyle::Rotary);
+	bs.setLimits(0, 100, 20, 80, 40, 60);
 }
 
 MainContentComponent::~MainContentComponent()

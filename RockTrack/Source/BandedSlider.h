@@ -20,7 +20,14 @@ public:
 	explicit BandedSlider(const String& componentName) ;
 	BandedSlider(SliderStyle style, TextEntryBoxPosition textBoxPosition);
 	~BandedSlider();
+
+	void setLimits(double displayLow, double displayHigh, double alertLow, double alertHigh, double warningLow, double warningHigh);
+
 private:
+	double dll, dlh;
+	double redLow, redHigh;
+	double greenLow, greenHigh;
+
 	//
 };
 

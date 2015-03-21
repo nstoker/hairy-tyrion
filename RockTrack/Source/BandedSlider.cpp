@@ -30,3 +30,15 @@ BandedSlider::~BandedSlider()
 {
 	//
 }
+
+void BandedSlider::setLimits(double displayLow, double displayHigh, double alertLow, double alertHigh, double warningLow, double warningHigh)
+{
+	dll = displayLow;
+	dlh = displayHigh;
+	redLow = alertLow;
+	redHigh = alertHigh;
+	greenLow = warningLow;
+	greenHigh = warningHigh;
+
+	setRange(displayLow, displayHigh);
+}
