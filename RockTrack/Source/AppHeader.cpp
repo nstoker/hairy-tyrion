@@ -39,7 +39,7 @@ AppHeader::AppHeader ()
 
     //[Constructor] You can add your own custom stuff here..
 
-	theLog->writeToLog("Initialising header");
+	theLog->logMessage("Initialising header");
 
 	addAndMakeVisible(appTitle = new Label("appTitle", TRANS("RockTrack")));
 	appTitle->setFont(Font(30.0f, Font::plain));
@@ -51,12 +51,7 @@ AppHeader::AppHeader ()
 
 	Image theLogo = ImageFileFormat::loadFrom(BinaryData::rockTrack_png, BinaryData::rockTrack_pngSize);
 	if (theLogo.isValid())
-	{
-		appLogo->setImage(theLogo);
-		theLog->writeToLog("Set Application header image");
-	}
-	else
-		theLog->writeToLog("Unable to set application header image");
+		appLogo->setImage(theLogo,RectanglePlacement::centred + RectanglePlacement::onlyReduceInSize);
 
 	resized();
     //[/Constructor]
@@ -94,7 +89,7 @@ void AppHeader::resized()
 	Rectangle<int>area = getLocalBounds();
 
 	if (appLogo)
-		appLogo->setBounds(area.removeFromLeft(appLogo->getWidth()));
+		appLogo->setBounds(area.removeFromLeft(50).reduced(2));
 
 	if (appTitle)
 		appTitle->setBounds(area);
