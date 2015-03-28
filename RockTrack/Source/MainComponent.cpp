@@ -34,5 +34,5 @@ void MainContentComponent::resized()
 {
 	Rectangle<int> area = getLocalBounds();
 
-	appHeader.setBounds(area.removeFromTop(45));
+	appHeader.setBounds(area.removeFromTop(75));
 }
