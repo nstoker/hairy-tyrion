@@ -18,6 +18,7 @@
       <FILE id="auBUiJ" name="sqlite3ppext.h" compile="0" resource="0" file="sqlite3/sqlite3ppext.h"/>
     </GROUP>
     <GROUP id="{16A451BE-FE8A-FA50-F948-4B8F2FEEA049}" name="Source">
+      <FILE id="GUj2UT" name="Main.h" compile="0" resource="0" file="Source/Main.h"/>
       <FILE id="K5APSh" name="AppHeader.cpp" compile="1" resource="0" file="Source/AppHeader.cpp"/>
       <FILE id="JkhR4v" name="AppHeader.h" compile="0" resource="0" file="Source/AppHeader.h"/>
       <FILE id="NxFThc" name="RockTrack.cpp" compile="1" resource="0" file="Source/RockTrack.cpp"/>

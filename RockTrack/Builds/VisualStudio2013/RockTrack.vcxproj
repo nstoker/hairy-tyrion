@@ -1245,6 +1245,7 @@
     <ClInclude Include="..\..\sqlite3\sqlite3ext.h"/>
     <ClInclude Include="..\..\sqlite3\sqlite3pp.h"/>
     <ClInclude Include="..\..\sqlite3\sqlite3ppext.h"/>
+    <ClInclude Include="..\..\Source\Main.h"/>
     <ClInclude Include="..\..\Source\AppHeader.h"/>
     <ClInclude Include="..\..\Source\RockTrack.h"/>
     <ClInclude Include="..\..\Source\Database.h"/>

@@ -1548,6 +1548,9 @@
     <ClInclude Include="..\..\sqlite3\sqlite3ppext.h">
       <Filter>RockTrack\sqlite3</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\Source\Main.h">
+      <Filter>RockTrack\Source</Filter>
+    </ClInclude>
     <ClInclude Include="..\..\Source\AppHeader.h">
       <Filter>RockTrack\Source</Filter>
     </ClInclude>
