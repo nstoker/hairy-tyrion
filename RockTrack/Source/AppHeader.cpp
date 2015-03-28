@@ -41,10 +41,12 @@ AppHeader::AppHeader ()
 
 	theLog->logMessage("Initialising header");
 
+	addAndMakeVisible(menuBar = new MenuBarComponent(this));
+
 	addAndMakeVisible(appTitle = new Label("appTitle", TRANS("RockTrack")));
-	appTitle->setFont(Font(30.0f, Font::plain));
-	appTitle->setJustificationType(Justification::centredLeft);
-	appTitle->setColour(Label::textColourId, Colours::antiquewhite);
+	appTitle->setFont(Font("Tahoma",40.0f, Font::bold));
+	appTitle->setJustificationType(Justification::topLeft);
+	appTitle->setColour(Label::textColourId, Colours::white);
 	appTitle->setEditable(false, false, false);
 
 	addAndMakeVisible(appLogo = new ImageComponent("appLogo"));
@@ -88,11 +90,16 @@ void AppHeader::resized()
 
 	Rectangle<int>area = getLocalBounds();
 
+	if (menuBar)
+	{ 
+		menuBar->setBounds(area.removeFromBottom(LookAndFeel::getDefaultLookAndFeel().getDefaultMenuBarHeight()));
+	}
+		
 	if (appLogo)
 		appLogo->setBounds(area.removeFromLeft(50).reduced(2));
 
 	if (appTitle)
-		appTitle->setBounds(area);
+		appTitle->setBounds(area.reduced(2));
 
     //[/UserResized]
 }
@@ -100,6 +107,26 @@ void AppHeader::resized()
 
 
 //[MiscUserCode] You can add your own definitions of your custom methods or any other code here...
+
+void AppHeader::menuItemSelected(int menuItemID, int /* topLevelMenuIndex */)
+{
+	//
+}
+
+StringArray AppHeader::getMenuBarNames()
+{
+	const char * const names[] = { "File", nullptr };
+	return StringArray(names);
+}
+
+PopupMenu AppHeader::getMenuForIndex(int menuIndex, const String& /*menuName*/)
+{
+	PopupMenu menu;
+
+	// Build the menu
+
+	return menu;
+}
 //[/MiscUserCode]
 
 
@@ -113,9 +140,9 @@ void AppHeader::resized()
 BEGIN_JUCER_METADATA
 
 <JUCER_COMPONENT documentType="Component" className="AppHeader" componentName=""
-                 parentClasses="public Component" constructorParams="" variableInitialisers=""
-                 snapPixels="8" snapActive="1" snapShown="1" overlayOpacity="0.330"
-                 fixedSize="0" initialWidth="600" initialHeight="45">
+                 parentClasses="public Component, public MenuBarModel" constructorParams=""
+                 variableInitialisers="" snapPixels="8" snapActive="1" snapShown="1"
+                 overlayOpacity="0.330" fixedSize="0" initialWidth="600" initialHeight="45">
   <BACKGROUND backgroundColour="800080"/>
 </JUCER_COMPONENT>
 

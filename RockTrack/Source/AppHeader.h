@@ -37,7 +37,8 @@
     Describe your class and how it works here!
                                                                     //[/Comments]
 */
-class AppHeader  : public Component
+class AppHeader  : public Component,
+                   public MenuBarModel
 {
 public:
     //==============================================================================
@@ -57,6 +58,11 @@ private:
     //[UserVariables]   -- You can add your own custom variables in this section.
 	ScopedPointer<Label> appTitle;
 	ScopedPointer<ImageComponent> appLogo;
+	ScopedPointer<MenuBarComponent> menuBar;
+
+	void menuItemSelected(int menuItemID, int /* topLevelMenuIndex */) override;
+	StringArray getMenuBarNames() override;
+	PopupMenu getMenuForIndex(int menuIndex, const String& /*menuName*/) override;
     //[/UserVariables]
 
     //==============================================================================
