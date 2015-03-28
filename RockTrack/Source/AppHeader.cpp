@@ -19,6 +19,7 @@
 
 //[Headers] You can add your own extra header files here...
 #include "RockTrack.h"
+#include "Main.h"
 //[/Headers]
 
 #include "AppHeader.h"
@@ -67,6 +68,12 @@ AppHeader::~AppHeader()
 
 
     //[Destructor]. You can add your own custom destruction code here..
+#if JUCE_MAC
+	MenuBarModel::setMacMainMenu(nullptr);
+#endif
+
+	PopupMenu::dismissAllActiveMenus();
+
     //[/Destructor]
 }
 
@@ -122,9 +129,14 @@ StringArray AppHeader::getMenuBarNames()
 PopupMenu AppHeader::getMenuForIndex(int menuIndex, const String& /*menuName*/)
 {
 	PopupMenu menu;
+	ApplicationCommandManager* commandManager = &MainWindow::getApplicationCommandManager();
 
+	theLog->logMessage("Menu index " + String(menuIndex));
 	// Build the menu
-
+	if (0 == menuIndex)
+	{
+		//
+	}
 	return menu;
 }
 //[/MiscUserCode]
