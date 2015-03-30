@@ -4,6 +4,9 @@
               bundleIdentifier="com.nstoker.RockTrack" includeBinaryInAppConfig="1"
               jucerVersion="3.1.0">
   <MAINGROUP id="IdSLrI" name="RockTrack">
+    <GROUP id="{B3238774-5572-2572-8D50-08F897EC7DD6}" name="Translations">
+      <FILE id="AB6KZu" name="french.txt" compile="0" resource="1" file="Translations/french.txt"/>
+    </GROUP>
     <GROUP id="{5641A92A-AD01-6CA4-7B71-B1CCCB4B3A5B}" name="Images">
       <FILE id="ewtnxK" name="rockTrack.png" compile="0" resource="1" file="Images/rockTrack.png"/>
     </GROUP>

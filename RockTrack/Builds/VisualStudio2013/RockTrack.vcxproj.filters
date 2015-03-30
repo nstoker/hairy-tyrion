@@ -5,6 +5,9 @@
     <Filter Include="RockTrack">
       <UniqueIdentifier>{2197EA1E-0502-B72C-EE30-C027D114830D}</UniqueIdentifier>
     </Filter>
+    <Filter Include="RockTrack\Translations">
+      <UniqueIdentifier>{3AC6B4C5-9447-2440-900C-DCC161F8B075}</UniqueIdentifier>
+    </Filter>
     <Filter Include="RockTrack\Images">
       <UniqueIdentifier>{19A990B2-F596-C78A-8AC4-5961CCF9744C}</UniqueIdentifier>
     </Filter>
@@ -2888,6 +2891,9 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
+    <None Include="..\..\Translations\french.txt">
+      <Filter>RockTrack\Translations</Filter>
+    </None>
     <None Include="..\..\Images\rockTrack.png">
       <Filter>RockTrack\Images</Filter>
     </None>

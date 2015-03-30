@@ -23,6 +23,26 @@ public:
     const String getApplicationVersion() override    { return ProjectInfo::versionString; }
     bool moreThanOneInstanceAllowed() override       { return true; }
 
+	void showLanguages()
+	{
+		logger->logMessage("showLanguages called");
+		ScopedPointer<LocalisedStrings> localisedStrings(LocalisedStrings::getCurrentMappings());
+
+		if (!localisedStrings)
+			logger->logMessage("No languages set");
+		else
+		{
+			logger->logMessage("Language name :" + localisedStrings->getLanguageName());
+
+			StringArray sa(localisedStrings->getCountryCodes());
+			for (int i = 0; i < sa.size(); ++i)
+			{
+				logger->logMessage("Country code :" + sa[i]);
+			}
+			//??setlocale()
+		}
+		localisedStrings.release();
+	}
     //==============================================================================
     void initialise (const String& /*commandLine*/) override
     {
@@ -33,6 +53,17 @@ public:
 		File dbPath = logger->getLogFile().getParentDirectory().getChildFile(getApplicationName() + ".sqlite3");
 		CDatabase db(dbPath);
 		db.initialise();
+
+		showLanguages();
+		ScopedPointer<LocalisedStrings> ls = new LocalisedStrings(String::createStringFromData(BinaryData::french_txt, BinaryData::french_txtSize), true);
+		logger->logMessage("'(no choices)' is " + translate("(no choices)"));
+		LocalisedStrings::setCurrentMappings(ls);
+		showLanguages();
+
+		logger->logMessage("'(no choices)' is now " + translate("(no choices)"));
+		/*LocalisedStrings::setCurrentMappings(nullptr);
+		logger->logMessage("'(no choices)' and now " + translate("(no choices)"));*/
+		ls.release();
     }
 
     void shutdown() override

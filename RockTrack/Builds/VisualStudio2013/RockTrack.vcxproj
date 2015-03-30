@@ -1693,6 +1693,7 @@
     <ClInclude Include="..\..\JuceLibraryCode\JuceHeader.h"/>
   </ItemGroup>
   <ItemGroup>
+    <None Include="..\..\Translations\french.txt"/>
     <None Include="..\..\Images\rockTrack.png"/>
     <None Include="..\..\..\..\..\juce\modules\juce_audio_basics\juce_module_info"/>
     <None Include="..\..\..\..\..\juce\modules\juce_audio_devices\juce_module_info"/>
