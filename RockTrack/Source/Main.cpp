@@ -32,12 +32,12 @@ public:
 			logger->logMessage("No languages set");
 		else
 		{
-			logger->logMessage("Language name :" + localisedStrings->getLanguageName());
+			logger->logMessage("Language name : " + localisedStrings->getLanguageName());
 
 			StringArray sa(localisedStrings->getCountryCodes());
 			for (int i = 0; i < sa.size(); ++i)
 			{
-				logger->logMessage("Country code :" + sa[i]);
+				logger->logMessage("Country code : " + sa[i]);
 			}
 			//??setlocale()
 		}
@@ -56,11 +56,13 @@ public:
 
 		showLanguages();
 		ScopedPointer<LocalisedStrings> ls = new LocalisedStrings(String::createStringFromData(BinaryData::french_txt, BinaryData::french_txtSize), true);
-		logger->logMessage("'(no choices)' is " + translate("(no choices)"));
+		logger->logMessage("' from ' is " + translate(" from "));
 		LocalisedStrings::setCurrentMappings(ls);
+		
 		showLanguages();
-
-		logger->logMessage("'(no choices)' is now " + translate("(no choices)"));
+		
+		logger->logMessage("' from ' is now " + translate(" from "));
+		logger->logMessage(LocalisedStrings::translateWithCurrentMappings(" from "));
 		/*LocalisedStrings::setCurrentMappings(nullptr);
 		logger->logMessage("'(no choices)' and now " + translate("(no choices)"));*/
 		ls.release();
